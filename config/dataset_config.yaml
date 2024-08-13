@@ -1,0 +1,36 @@
+lfw:
+    image_dir: './dataset/lfw'
+    targets_txt: './dataset/targets/lfw_targets.txt'
+
+lfw-200:
+    image_dir: './dataset/lfw'
+    targets_txt: './dataset/targets/lfw_targets_200.txt'
+
+cfp-fp-F:
+    image_dir: './dataset/cfp/Data'
+    targets_txt: './dataset/targets/cfp-fp_targets_F.txt'
+    protocol_dir: './dataset/cfp/Protocol'
+
+cfp-fp-P:
+    image_dir: './dataset/cfp/Data'
+    targets_txt: './dataset/targets/cfp-fp_targets_P.txt'
+    protocol_dir: './dataset/cfp/Protocol'
+
+cfp-fp-200-F:
+    image_dir: './dataset/cfp/Data'
+    targets_txt: './dataset/targets/cfp-fp-200_targets_F.txt'
+    protocol_dir: './dataset/cfp/Protocol'
+
+cfp-fp-200-P:
+    image_dir: './dataset/cfp/Data'
+    targets_txt: './dataset/targets/cfp-fp-200_targets_P.txt'
+    protocol_dir: './dataset/cfp/Protocol'
+
+agedb_30:
+    image_dir: './dataset/agedb_30'
+    targets_txt: './dataset/targets/agedb_30_targets.txt'
+
+agedb_30_200:
+    image_dir: './dataset/agedb_30'
+    targets_txt: './dataset/targets/agedb_30_200_targets.txt'
+

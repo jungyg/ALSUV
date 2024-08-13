@@ -1,0 +1,224 @@
+HOG:
+    cell_size: 16
+    bin_size: 16
+    img_size: 192
+
+FaceNet:
+    img_size: 160
+    lfw_threshold : 0.4230064871907234
+    lfw_far_0.0001_threshold : 0.6948426503837108
+    lfw_far_0.001_threshold : 0.4978747580647469
+    lfw_far_0.01_threshold : 0.3806006306409836
+    lfw_far_0.1_threshold : 0.22706218451261517
+    cfp_threshold : 0.30721913251129074
+    cfp_far_0.0001_threshold : 0.6130053
+    cfp_far_0.001_threshold : 0.5135249
+    cfp_far_0.01_threshold : 0.3813227
+    agedb_30_threshold : 0.2967626887798308
+    agedb_30_far_0.0001_threshold : 0.6485264372825621
+    agedb_30_far_0.001_threshold : 0.5820546491265295
+    agedb_30_far_0.01_threshold : 0.49562756224870674
+
+
+VGGNet19:
+    img_size: 112
+    weight: ./encoder/weights/VGG19_CosFace.pt
+    lfw_threshold : 0.21559691476821902
+    lfw_far_0.0001_threshold : 0.5207788653433323
+    lfw_far_0.001_threshold : 0.29563267542123794
+    lfw_far_0.01_threshold : 0.19881129931211472
+    lfw_far_0.1_threshold : 0.09980049510002137
+    cfp_threshold : 0.1524467488648546
+    cfp_far_0.0001_threshold : 0.4115162
+    cfp_far_0.001_threshold : 0.3085648
+    cfp_far_0.01_threshold : 0.1984601
+    agedb_30_threshold : 0.14302418071031575
+    agedb_30_far_0.0001_threshold : 0.42448399300575257
+    agedb_30_far_0.001_threshold : 0.4065593347549439
+    agedb_30_far_0.01_threshold : 0.30103857874274254
+
+
+AdaFace:
+    img_size: 112
+    weight: ./encoder/weights/adaface_ir101_webface4m.ckpt
+    lfw_threshold : 0.1889205847531557
+    lfw_far_0.0001_threshold : 0.23245655649602415
+    lfw_far_0.001_threshold : 0.21775461839437488
+    lfw_far_0.01_threshold : 0.15951670854985717
+    lfw_far_0.1_threshold : 0.08897019936442374
+    cfp_threshold : 0.
+    cfp_far_0.0001_threshold : 0.
+    cfp_far_0.001_threshold : 0.
+    cfp_far_0.01_threshold : 0.
+    agedb_30_threshold : 0.
+    agedb_30_far_0.0001_threshold : 0.
+    agedb_30_far_0.001_threshold : 0.
+    agedb_30_far_0.01_threshold : 0.
+
+## 98.55
+ElasticFace:
+    img_size: 112
+    weight: ./encoder/weights/eleasticface_ir101_ms1mv2.pth
+    lfw_threshold : 0.19020373751968145
+    lfw_far_0.0001_threshold : 0.30998533498495817
+    lfw_far_0.001_threshold : 0.2550280694812536
+    lfw_far_0.01_threshold : 0.1830902710035443
+    lfw_far_0.1_threshold : 0.1089725392386317
+    cfp_threshold : 0.
+    cfp_far_0.0001_threshold : 0.
+    cfp_far_0.001_threshold : 0.
+    cfp_far_0.01_threshold : 0.
+    agedb_30_threshold : 0.
+    agedb_30_far_0.0001_threshold : 0.
+    agedb_30_far_0.001_threshold : 0.
+    agedb_30_far_0.01_threshold : 0.
+
+## 98.5
+CurricularFace:
+    img_size: 112
+    weight: ./encoder/weights/CurricularFace_Backbone.pth
+    lfw_threshold : 0.15988608262091875
+    lfw_far_0.0001_threshold : 0.28441450145840647
+    lfw_far_0.001_threshold : 0.22087279264926912
+    lfw_far_0.01_threshold : 0.158553039778769
+    lfw_far_0.1_threshold : 0.09256741909235716
+    cfp_threshold : 0.
+    cfp_far_0.0001_threshold : 0.
+    cfp_far_0.001_threshold : 0.
+    cfp_far_0.01_threshold : 0.
+    agedb_30_threshold : 0.
+    agedb_30_far_0.0001_threshold : 0.
+    agedb_30_far_0.001_threshold : 0.
+    agedb_30_far_0.01_threshold : 0.
+
+ResNet50:
+    img_size: 112
+    depth: 50
+    drop_ratio: 0.4
+    net_mode: ir
+    feat_dim: 512
+    out_h: 7
+    out_w: 7
+    weight: ./encoder/weights/ResIR50_CosFace.pt
+    lfw_threshold : 0.2815237947404384
+    lfw_far_0.0001_threshold : 0.493284598556161
+    lfw_far_0.001_threshold : 0.3371257935076952
+    lfw_far_0.01_threshold : 0.24550737000703815
+    lfw_far_0.1_threshold : 0.12654801094233992
+    cfp_threshold : 0.18854210636403296
+    cfp_far_0.0001_threshold : 0.4518223
+    cfp_far_0.001_threshold : 0.3560296
+    cfp_far_0.01_threshold : 0.2499893
+    agedb_30_threshold : 0.1882909686863422
+    agedb_30_far_0.0001_threshold : 0.4463511220812797
+    agedb_30_far_0.001_threshold : 0.42895764037668704
+    agedb_30_far_0.01_threshold : 0.3427860120624303
+
+
+MobileFaceNet:
+    img_size: 112
+    feat_dim: 512
+    out_h: 7
+    out_w: 7
+    weight: ./encoder/weights/MobileFaceNet-MS1M.pt
+    lfw_threshold : 0.21108006143569946
+    lfw_far_0.0001_threshold : 0.3684333252429962
+    lfw_far_0.001_threshold : 0.26453673004508016
+    lfw_far_0.01_threshold : 0.19068688537478445
+    lfw_far_0.1_threshold : 0.10561476038694378
+    cfp_threshold : 0.12902578849210206
+    cfp_far_0.0001_threshold : 0.3199453
+    cfp_far_0.001_threshold : 0.2561577
+    cfp_far_0.01_threshold : 0.1880350 
+    agedb_30_threshold : 0.17987846754789355
+    agedb_30_far_0.0001_threshold : 0.34017969952821736
+    agedb_30_far_0.001_threshold : 0.26710987415313725
+    agedb_30_far_0.01_threshold : 0.12726425950527193
+
+
+ResNet152:
+    img_size: 112
+    depth: 152
+    drop_ratio: 0.4
+    net_mode: ir_se
+    feat_dim: 512
+    out_h: 7
+    out_w: 7
+    weight: /data/New_Projects/Train_Encoders/chkpt/ResNet152-MS1M.pt
+
+ResNet100:  # iresnet_100 from https://github.com/deepinsight/insightface/tree/master/recognition/arcface_torch/backbones
+    img_size: 112
+    weight: ./encoder/weights/arcface_r100_ms1mv3_insightface.pt
+    lfw_threshold : 0.2672162918448448
+    lfw_far_0.0001_threshold : 0.2672162918448448
+    lfw_far_0.001_threshold : 0.24469417524337767
+    lfw_far_0.01_threshold : 0.178787349820137
+    lfw_far_0.1_threshold : 0.09474429365992543
+    cfp_threshold : 0.19767000157125642
+    cfp_far_0.0001_threshold : 0.3025413
+    cfp_far_0.001_threshold : 0.2352018
+    cfp_far_0.01_threshold : 0.1683724
+    agedb_30_threshold : 0.21533239609003063
+    agedb_30_far_0.0001_threshold : 0.28486893358677623
+    agedb_30_far_0.001_threshold : 0.261509847895801
+    agedb_30_far_0.01_threshold : 0.19446062044948337
+
+
+
+Swin-S:
+    img_size: 224
+    patch_size: 4
+    in_chans: 3
+    embed_dim: 96
+    depths:
+    - 2
+    - 2
+    - 18
+    - 2
+    num_heads:
+    - 3
+    - 6
+    - 12
+    - 24
+    window_size: 7
+    mlp_ratio: 4.0
+    drop_rate: 0.0
+    drop_path_rate: 0.3
+    weight: ./encoder/weights/Swin-S-MS1M.pt
+    lfw_threshold : 0.24595557063817974
+    lfw_far_0.0001_threshold : 0.24571655967235567
+    lfw_far_0.001_threshold : 0.2405778239071369
+    lfw_far_0.01_threshold : 0.16325777646303175
+    lfw_far_0.1_threshold : 0.09012042092084882
+    cfp_threshold : 0.13634692533503345
+    cfp_far_0.0001_threshold : 0.3069592
+    cfp_far_0.001_threshold : 0.2384330
+    cfp_far_0.01_threshold : 0.1647140
+    agedb_30_threshold : 0.2088514327600598
+    agedb_30_far_0.0001_threshold : 0.33553495133519173
+    agedb_30_far_0.001_threshold : 0.2573990850031376
+    agedb_30_far_0.01_threshold : 0.20655331904441115
+
+
+
+Swin-T:
+    img_size: 224
+    patch_size: 4
+    in_chans: 3
+    embed_dim: 96
+    depths:
+    - 2
+    - 2
+    - 6
+    - 2
+    num_heads:
+    - 3
+    - 6
+    - 12
+    - 24
+    window_size: 7
+    mlp_ratio: 4.0
+    drop_rate: 0.0
+    drop_path_rate: 0.3
+    weight: ./encoder/weights/Swin-T-MS1M.pt
+    threshold: 0.219183246910572
