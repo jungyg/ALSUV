@@ -4,7 +4,6 @@ import random
 import argparse
 import datetime
 import numpy as np
-import matplotlib.pyplot as plt
 from PIL import Image
 from tqdm import tqdm
 import yaml
@@ -12,7 +11,6 @@ import glob
 
 import torch
 import torch.optim as optim
-from torch.utils.tensorboard import SummaryWriter
 from torchvision import utils, transforms
 
 from dataset import dataset_parser

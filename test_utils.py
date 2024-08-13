@@ -13,7 +13,6 @@ import pandas as pd
 
 import torch
 import torch.optim as optim
-from torch.utils.tensorboard import SummaryWriter
 from torchvision import utils, transforms
 
 from dataset import dataset_parser

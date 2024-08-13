@@ -2,7 +2,6 @@ import os
 import cv2
 import numpy as np
 import math
-import matplotlib.pyplot as plt
 import torch
 import torch.nn.functional as F
 from torchvision import transforms
@@ -243,20 +242,3 @@ if __name__ == "__main__":
     device = torch.device('cuda:0')
     hog = HOG_descriptor(cell_size=16, bin_size=16)
     encoder = HOG_wrapper(hog)
-    # encoder = encoder.to(device)
-    # img_dir = '/home/yoon/datasets/face/FaceXZoo/lfw/lfw_crop'  # directory for lfw images
-    # txt_dir = '/home/yoon/datasets/face/FaceXZoo/lfw/pairs.txt'  # directory for lfw pairs.txt
-    # evaluator = lfw_evaluator(img_dir, txt_dir, 160)
-    # acc, std = evaluator.evaluate(encoder)
-    # print(f"acc:{acc * 100}%, std:{std * 100}%")
-    imdir = "/data/New_Projects/ZOIA/results/lfw/FaceNet/BB_top10_k4_iters200/attack_images/Aaron_Peirsol_0001.jpg"
-    img = cv2.imread(imdir, cv2.IMREAD_GRAYSCALE)
-    img = cv2.resize(img, (192, 192))
-    vector, image = hog.extract(img, visualize=True)
-    print(vector.shape)
-    fig,ax = plt.subplots(1,2,figsize=(8,4))
-    ax[0].imshow(Image.open(imdir))
-    ax[1].imshow(image)
-    ax[0].set_title("Original Image", fontsize=17)
-    ax[1].set_title("HOG Feature", fontsize=17)
-    plt.show()

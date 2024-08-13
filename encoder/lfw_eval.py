@@ -154,14 +154,14 @@ if __name__ == "__main__":
     elif args.target in ['ResNet100', 'SwinTransformer']:
         args.align = 'FXZoo'
 
-    args.img_dir = f'/home/yoon/datasets/face/lfw/{args.align}_aligned'  # directory for lfw images
-    args.txt_dir = '/home/yoon/datasets/face/lfw/pairs.txt'  # directory for lfw pairs.txt
+    args.img_dir = f'./datasets/face/lfw/{args.align}_aligned'  # directory for lfw images
+    args.txt_dir = './datasets/face/lfw/pairs.txt'  # directory for lfw pairs.txt
 
     args.encoder_type = "VGGNet19"  # TODO: which encoder to evaluate?
     encoder = fetch_encoder(args.target_encoder).to(args.device_id)
 
-    img_dir = '/home/yoon/datasets/face/FaceXZoo/lfw/lfw_crop'  # directory for lfw images
-    txt_dir = '/home/yoon/datasets/face/FaceXZoo/lfw/pairs.txt'  # directory for lfw pairs.txt
+    img_dir = './datasets/face/FaceXZoo/lfw/lfw_crop'  # directory for lfw images
+    txt_dir = './datasets/face/FaceXZoo/lfw/pairs.txt'  # directory for lfw pairs.txt
     evaluator = lfw_evaluator(args.img_dir, args.txt_dir, encoder.img_size, args.device_id, flipcat=False)
     acc, std = evaluator.evaluate(encoder)
     print(f"acc:{acc * 100}%, std:{std * 100}%")

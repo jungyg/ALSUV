@@ -258,10 +258,3 @@ if __name__ == "__main__":
     hog = HOGLayerMoreComplicated(nbins=4, pool=8)
     encoder = hog.to(device)
 
-    # img_dir = '/home/yoon/datasets/face/lfw/mtcnn_aligned'  # directory for lfw images
-    # txt_dir = '/home/yoon/datasets/face/lfw/pairs.txt'  # directory for lfw pairs.txt
-    img_dir = '/home/yoon/datasets/face/FaceXZoo/lfw/lfw_crop'  # directory for lfw images
-    txt_dir = '/home/yoon/datasets/face/FaceXZoo/lfw/pairs.txt'  # directory for lfw pairs.txt
-    evaluator = lfw_evaluator(img_dir, txt_dir, 160, device, flipcat=False)
-    acc, std = evaluator.evaluate(encoder)
-    print(f"acc:{acc * 100}%, std:{std * 100}%")
